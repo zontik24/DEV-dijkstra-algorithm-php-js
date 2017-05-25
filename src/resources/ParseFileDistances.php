@@ -1,5 +1,10 @@
 <?php
 
+
+/**
+* This class convert values from file for create graph model 
+*/
+
 class ParseFileDistances 
 {
 	public static function convert($filePath) 

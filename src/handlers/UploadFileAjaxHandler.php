@@ -1,5 +1,10 @@
 <?php 
 
+
+// that file in development right now
+
+exit('development is coming');
+
 include($_SERVER['DOCUMENT_ROOT'].'/src/resources/ParseFileDistances.php');
 include($_SERVER['DOCUMENT_ROOT'].'/src/resources/Graph.php');
 include($_SERVER['DOCUMENT_ROOT'].'/src/resources/Dijkstra.php');

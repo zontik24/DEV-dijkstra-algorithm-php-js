@@ -4,16 +4,14 @@ class Dijkstra
 {
 	public static function shortestPath($a, $b, $_distArr)
 	{
-		//initialize the array for storing
-	    $S = array();//the nearest path with its parent and weight
-	    $Q = array();//the left nodes without the nearest path
+	    $S = array();
+	    $Q = array();
 	    foreach(array_keys($_distArr) as $val) $Q[$val] = 99999;
 	    $Q[$a] = 0;
 
-	    //start calculating
 	    while(!empty($Q))
 	    {
-	        $min = array_search(min($Q), $Q);//the most min weight
+	        $min = array_search(min($Q), $Q);
 	        if($min == $b) break;
 	        foreach($_distArr[$min] as $key=>$val)
 	        {
@@ -26,7 +24,6 @@ class Dijkstra
 	        unset($Q[$min]);
 	    }
 
-	    //list the path
 	    $path = array();
 	    $pos = $b;
 	    while($pos != $a)
@@ -43,7 +40,8 @@ class Dijkstra
 
 	    return [
 	    	'length' => $S[$b][1],
-	    	'trajectory' => implode('->', $path),
+	    	//'trajectory' => implode('->', $path),
+	    	'trajectory' => $path,
 	    ];
 	}
 }
