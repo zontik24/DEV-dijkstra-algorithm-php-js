@@ -13,10 +13,8 @@ class ParseFileDistances
 		$arrayTo = array();
 		$arrayValue = array();
 		$file = fopen($filePath, "r");
-		if ($file) 
-		{
-			while (!feof($file)) 
-			{	
+		if ($file) {
+			while (!feof($file)) {	
 				$arrayStringElements = array();
 				$currentFileString = fgets($file);
 				$currentFileString = trim($currentFileString);
