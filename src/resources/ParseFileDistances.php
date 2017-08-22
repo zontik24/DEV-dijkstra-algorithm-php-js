@@ -7,7 +7,11 @@
 
 class ParseFileDistances 
 {
-	public static function convert($filePath) 
+    /**
+     * @param string $filePath
+     * @return array
+     */
+    public static function convert($filePath)
 	{
 		$arrayFrom = array();
 		$arrayTo = array();

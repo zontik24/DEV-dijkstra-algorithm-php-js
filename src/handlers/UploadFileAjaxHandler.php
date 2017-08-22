@@ -1,9 +1,6 @@
-<?php 
+<?php
 
-
-// that file in development right now
-
-exit('development is coming');
+exit('this section under development right now');
 
 include($_SERVER['DOCUMENT_ROOT'].'/src/resources/ParseFileDistances.php');
 include($_SERVER['DOCUMENT_ROOT'].'/src/resources/Graph.php');
@@ -22,12 +19,12 @@ if($extension == 'txt' && $mimeType == 'text/plain')
 	$_FILES['file']['name'] = 'file';
 	$uploadfile = $uploaddir . $_FILES['file']['name'] . '.' . $extension;
 
-	if(file_exists($uploaddir.$_FILES['file']['name'].'.txt')) 
-	{
+	if(file_exists($uploaddir.$_FILES['file']['name'].'.txt')) {
 		unlink($uploaddir.$_FILES['file']['name'].'.txt');
 	}
 
-	if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) 
+	if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile))
+
 	{
 		$parseResult = ParseFileDistances::convert($uploaddir.$_FILES['file']['name'].'.txt');
 		$arrayDist = Graph::create($parseResult['from'], $parseResult['to'], $parseResult['value']);

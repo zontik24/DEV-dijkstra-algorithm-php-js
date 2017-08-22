@@ -2,7 +2,13 @@
 
 class Dijkstra
 {
-	public static function shortestPath($a, $b, $_distArr)
+    /**
+     * @param $a
+     * @param $b
+     * @param $_distArr
+     * @return array|bool
+     */
+    public static function shortestPath($a, $b, $_distArr)
 	{
 	    $S = array();
 	    $Q = array();
